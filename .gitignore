@@ -1,0 +1,6 @@
+data/
+*.log
+*.csv
+*.parquet
+*.sqlite
+*.db
