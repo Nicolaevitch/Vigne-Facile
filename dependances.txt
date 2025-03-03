@@ -1,0 +1,9 @@
+sqlite3
+datetime
+pandas
+requests
+pyspark
+elasticsearch
+elasticsearch.helpers
+airflow
+airflow.schedulers
