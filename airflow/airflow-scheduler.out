@@ -1,0 +1,808 @@
+[2025-03-02T03:20:16.860+0100] {executor_loader.py:258} INFO - Loaded executor: SequentialExecutor
+[2025-03-02T03:20:17.093+0100] {scheduler_job_runner.py:950} INFO - Starting the scheduler
+[2025-03-02T03:20:17.098+0100] {scheduler_job_runner.py:957} INFO - Processing each file at most -1 times
+[2025-03-02T03:20:17.157+0100] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 156792
+[2025-03-02T03:20:17.171+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T03:20:17.607+0100] {settings.py:63} INFO - Configured default timezone UTC
+[2025-03-02T03:20:18.032+0100] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[2025-03-02T03:20:19.565+0100] {dag.py:4180} INFO - Setting next_dagrun for simple_meteo_dag to 2025-03-02 02:00:00+00:00, run_after=2025-03-02 03:00:00+00:00
+Dag run  in running state
+Dag information Queued at: 2025-03-02 02:20:19.512486+00:00 hash info: e8cb26f5d3e309137b7fde1aa759e081
+Dag run  in running state
+Dag information Queued at: 2025-03-02 02:12:29.127296+00:00 hash info: e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T03:20:20.160+0100] {scheduler_job_runner.py:435} INFO - 4 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>
+[2025-03-02T03:20:20.163+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T03:20:20.164+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T03:20:20.165+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 2/16 running and queued tasks
+[2025-03-02T03:20:20.166+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 3/16 running and queued tasks
+[2025-03-02T03:20:20.168+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>
+[2025-03-02T03:20:20.190+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T03:20:20.194+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='scheduled__2025-03-02T01:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 4 and queue default
+[2025-03-02T03:20:20.196+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'scheduled__2025-03-02T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:20:20.197+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='manual__2025-03-02T02:12:28.962725+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 4 and queue default
+[2025-03-02T03:20:20.198+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'manual__2025-03-02T02:12:28.962725+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:20:20.200+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='scheduled__2025-03-02T01:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T03:20:20.201+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'scheduled__2025-03-02T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:20:20.203+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='manual__2025-03-02T02:12:28.962725+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T03:20:20.204+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'manual__2025-03-02T02:12:28.962725+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:20:20.223+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'scheduled__2025-03-02T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:20:25.507+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:20:26.914+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:20:26.935+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:20:26.936+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:20:27.489+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T01:00:00+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:21:21.455+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'manual__2025-03-02T02:12:28.962725+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:21:28.139+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:21:28.758+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:21:28.780+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:21:28.783+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:21:29.480+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:12:28.962725+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:22:04.963+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'scheduled__2025-03-02T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:22:11.068+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:22:11.649+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:22:11.665+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:22:11.666+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:22:12.174+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T01:00:00+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:22:16.862+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'manual__2025-03-02T02:12:28.962725+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:22:20.037+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:22:20.431+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:22:20.444+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:22:20.445+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:22:20.822+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:12:28.962725+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:22:22.892+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='scheduled__2025-03-02T01:00:00+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:22:22.918+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='manual__2025-03-02T02:12:28.962725+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:22:22.923+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='scheduled__2025-03-02T01:00:00+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:22:22.927+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='manual__2025-03-02T02:12:28.962725+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:22:24.153+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_etat_traffic_script, run_id=scheduled__2025-03-02T01:00:00+00:00, map_index=-1, run_start_date=2025-03-02 02:22:12.348495+00:00, run_end_date=2025-03-02 02:22:15.803369+00:00, run_duration=3.454874, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=24, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 02:20:20.171040+00:00, queued_by_job_id=21, pid=157833
+[2025-03-02T03:22:24.272+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_meteo_script, run_id=scheduled__2025-03-02T01:00:00+00:00, map_index=-1, run_start_date=2025-03-02 02:20:27.677848+00:00, run_end_date=2025-03-02 02:21:17.029855+00:00, run_duration=49.352007, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=22, pool=default_pool, queue=default, priority_weight=4, operator=BashOperator, queued_dttm=2025-03-02 02:20:20.171040+00:00, queued_by_job_id=21, pid=156846
+[2025-03-02T03:22:24.274+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_etat_traffic_script, run_id=manual__2025-03-02T02:12:28.962725+00:00, map_index=-1, run_start_date=2025-03-02 02:22:20.986482+00:00, run_end_date=2025-03-02 02:22:21.825393+00:00, run_duration=0.838911, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=25, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 02:20:20.171040+00:00, queued_by_job_id=21, pid=157857
+[2025-03-02T03:22:24.277+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_meteo_script, run_id=manual__2025-03-02T02:12:28.962725+00:00, map_index=-1, run_start_date=2025-03-02 02:21:29.696160+00:00, run_end_date=2025-03-02 02:22:02.466309+00:00, run_duration=32.770149, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=23, pool=default_pool, queue=default, priority_weight=4, operator=BashOperator, queued_dttm=2025-03-02 02:20:20.171040+00:00, queued_by_job_id=21, pid=157368
+[2025-03-02T03:22:24.357+0100] {manager.py:293} ERROR - DagFileProcessorManager (PID=156792) last sent a heartbeat 132.87 seconds ago! Restarting it
+[2025-03-02T03:22:24.410+0100] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 156792. PIDs of all processes in the group: [156792]
+[2025-03-02T03:22:24.415+0100] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 156792
+[2025-03-02T03:22:28.041+0100] {process_utils.py:80} INFO - Process psutil.Process(pid=156792, status='terminated', exitcode=0, started='03:20:06') (156792) terminated with exit code 0
+[2025-03-02T03:22:28.099+0100] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 157861
+[2025-03-02T03:22:28.317+0100] {settings.py:63} INFO - Configured default timezone UTC
+[2025-03-02T03:22:28.380+0100] {job.py:229} INFO - Heartbeat recovered after 136.05 seconds
+[2025-03-02T03:22:28.980+0100] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+Dag run  in running state
+Dag information Queued at: 2025-03-02 02:20:55.624712+00:00 hash info: e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T03:22:30.859+0100] {scheduler_job_runner.py:435} INFO - 4 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:20:55+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:20:55+00:00 [scheduled]>
+[2025-03-02T03:22:30.862+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T03:22:30.864+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T03:22:30.865+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 2/16 running and queued tasks
+[2025-03-02T03:22:30.867+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 3/16 running and queued tasks
+[2025-03-02T03:22:30.868+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:20:55+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:20:55+00:00 [scheduled]>
+[2025-03-02T03:22:30.890+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:20:55+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_action_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:20:55+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T03:22:30.894+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='manual__2025-03-02T02:20:55+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 4 and queue default
+[2025-03-02T03:22:30.896+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:22:30.898+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='scheduled__2025-03-02T01:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2025-03-02T03:22:30.899+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'scheduled__2025-03-02T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:22:30.900+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='manual__2025-03-02T02:12:28.962725+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2025-03-02T03:22:30.901+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'manual__2025-03-02T02:12:28.962725+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:22:30.903+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='manual__2025-03-02T02:20:55+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T03:22:30.904+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:22:30.927+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:22:33.926+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:22:34.422+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:22:34.441+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:22:34.445+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:22:34.914+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:20:55+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:23:09.421+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'scheduled__2025-03-02T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:23:15.297+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:23:15.781+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:15.798+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:23:15.800+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:16.266+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_script scheduled__2025-03-02T01:00:00+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:23:19.639+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'manual__2025-03-02T02:12:28.962725+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:23:20.856+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:23:21.303+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:21.319+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:23:21.321+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:21.793+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:12:28.962725+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:23:24.771+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:23:27.903+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:23:28.331+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:28.348+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:23:28.349+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:28.723+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:20:55+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:23:33.170+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='manual__2025-03-02T02:20:55+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:23:33.175+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='scheduled__2025-03-02T01:00:00+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:23:33.176+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='manual__2025-03-02T02:12:28.962725+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:23:33.178+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='manual__2025-03-02T02:20:55+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:23:33.374+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_script, run_id=scheduled__2025-03-02T01:00:00+00:00, map_index=-1, run_start_date=2025-03-02 02:23:16.458294+00:00, run_end_date=2025-03-02 02:23:18.445285+00:00, run_duration=1.986991, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=27, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2025-03-02 02:22:30.870258+00:00, queued_by_job_id=21, pid=158354
+[2025-03-02T03:23:33.383+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_etat_traffic_script, run_id=manual__2025-03-02T02:20:55+00:00, map_index=-1, run_start_date=2025-03-02 02:23:28.906672+00:00, run_end_date=2025-03-02 02:23:32.136928+00:00, run_duration=3.230256, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=29, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 02:22:30.870258+00:00, queued_by_job_id=21, pid=158464
+[2025-03-02T03:23:33.385+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_meteo_script, run_id=manual__2025-03-02T02:20:55+00:00, map_index=-1, run_start_date=2025-03-02 02:22:35.141926+00:00, run_end_date=2025-03-02 02:23:07.549932+00:00, run_duration=32.408006, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=26, pool=default_pool, queue=default, priority_weight=4, operator=BashOperator, queued_dttm=2025-03-02 02:22:30.870258+00:00, queued_by_job_id=21, pid=157929
+[2025-03-02T03:23:33.387+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_script, run_id=manual__2025-03-02T02:12:28.962725+00:00, map_index=-1, run_start_date=2025-03-02 02:23:21.991279+00:00, run_end_date=2025-03-02 02:23:23.653797+00:00, run_duration=1.662518, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=28, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2025-03-02 02:22:30.870258+00:00, queued_by_job_id=21, pid=158384
+[2025-03-02T03:23:33.411+0100] {manager.py:293} ERROR - DagFileProcessorManager (PID=157861) last sent a heartbeat 66.89 seconds ago! Restarting it
+[2025-03-02T03:23:33.420+0100] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 157861. PIDs of all processes in the group: [157861]
+[2025-03-02T03:23:33.422+0100] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 157861
+[2025-03-02T03:23:36.015+0100] {process_utils.py:80} INFO - Process psutil.Process(pid=157861, status='terminated', exitcode=0, started='03:22:27') (157861) terminated with exit code 0
+[2025-03-02T03:23:36.036+0100] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 158472
+[2025-03-02T03:23:36.171+0100] {job.py:229} INFO - Heartbeat recovered after 67.89 seconds
+[2025-03-02T03:23:36.244+0100] {settings.py:63} INFO - Configured default timezone UTC
+[2025-03-02T03:23:36.910+0100] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[2025-03-02T03:23:38.646+0100] {scheduler_job_runner.py:435} INFO - 3 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:20:55+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>
+[2025-03-02T03:23:38.648+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T03:23:38.650+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T03:23:38.652+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 2/16 running and queued tasks
+[2025-03-02T03:23:38.653+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:20:55+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>
+[2025-03-02T03:23:38.675+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:20:55+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_action_prioritaire_script scheduled__2025-03-02T01:00:00+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T03:23:38.678+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='manual__2025-03-02T02:20:55+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2025-03-02T03:23:38.680+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:23:38.682+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='scheduled__2025-03-02T01:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2025-03-02T03:23:38.683+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'scheduled__2025-03-02T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:23:38.685+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='manual__2025-03-02T02:12:28.962725+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2025-03-02T03:23:38.686+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'manual__2025-03-02T02:12:28.962725+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:23:38.708+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:23:41.754+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:23:42.290+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:42.306+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:23:42.308+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:42.788+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:20:55+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:23:46.215+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'scheduled__2025-03-02T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:23:48.956+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:23:49.310+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:49.321+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:23:49.322+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:49.651+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_prioritaire_script scheduled__2025-03-02T01:00:00+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:23:51.365+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'manual__2025-03-02T02:12:28.962725+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:23:51.655+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:23:51.988+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:51.999+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:23:52.000+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:23:52.331+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:12:28.962725+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:23:54.011+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='manual__2025-03-02T02:20:55+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:23:54.013+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='scheduled__2025-03-02T01:00:00+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:23:54.014+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='manual__2025-03-02T02:12:28.962725+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:23:54.042+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_prioritaire_script, run_id=scheduled__2025-03-02T01:00:00+00:00, map_index=-1, run_start_date=2025-03-02 02:23:49.796073+00:00, run_end_date=2025-03-02 02:23:50.405542+00:00, run_duration=0.609469, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=31, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-03-02 02:23:38.655822+00:00, queued_by_job_id=21, pid=158522
+[2025-03-02T03:23:54.043+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_script, run_id=manual__2025-03-02T02:20:55+00:00, map_index=-1, run_start_date=2025-03-02 02:23:42.996576+00:00, run_end_date=2025-03-02 02:23:44.949616+00:00, run_duration=1.95304, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=30, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2025-03-02 02:23:38.655822+00:00, queued_by_job_id=21, pid=158490
+[2025-03-02T03:23:54.045+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_prioritaire_script, run_id=manual__2025-03-02T02:12:28.962725+00:00, map_index=-1, run_start_date=2025-03-02 02:23:52.479094+00:00, run_end_date=2025-03-02 02:23:53.060351+00:00, run_duration=0.581257, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=32, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-03-02 02:23:38.655822+00:00, queued_by_job_id=21, pid=158539
+[2025-03-02T03:24:00.111+0100] {scheduler_job_runner.py:435} INFO - 3 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:20:55+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.send_to_elastic scheduled__2025-03-02T01:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>
+[2025-03-02T03:24:00.113+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T03:24:00.114+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T03:24:00.116+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 2/16 running and queued tasks
+[2025-03-02T03:24:00.117+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:20:55+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.send_to_elastic scheduled__2025-03-02T01:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>
+[2025-03-02T03:24:00.154+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:20:55+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.send_to_elastic scheduled__2025-03-02T01:00:00+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:12:28.962725+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T03:24:00.155+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='manual__2025-03-02T02:20:55+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2025-03-02T03:24:00.157+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:24:00.158+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='scheduled__2025-03-02T01:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T03:24:00.160+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'scheduled__2025-03-02T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:24:00.161+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T02:12:28.962725+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T03:24:00.163+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T02:12:28.962725+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:24:00.185+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:24:03.324+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:24:03.774+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:24:03.789+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:24:03.790+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:24:04.239+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:20:55+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:24:06.332+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'scheduled__2025-03-02T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:24:09.449+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:24:09.894+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:24:09.910+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:24:09.911+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:24:10.352+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.send_to_elastic scheduled__2025-03-02T01:00:00+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:24:22.278+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T02:12:28.962725+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:24:25.289+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:24:25.759+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:24:25.777+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:24:25.778+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:24:26.247+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:12:28.962725+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:24:43.711+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='manual__2025-03-02T02:20:55+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:24:43.713+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='scheduled__2025-03-02T01:00:00+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:24:43.714+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T02:12:28.962725+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:24:43.752+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=send_to_elastic, run_id=scheduled__2025-03-02T01:00:00+00:00, map_index=-1, run_start_date=2025-03-02 02:24:10.596942+00:00, run_end_date=2025-03-02 02:24:23.076150+00:00, run_duration=12.479208, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=34, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 02:24:00.119840+00:00, queued_by_job_id=21, pid=158584
+[2025-03-02T03:24:43.756+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_prioritaire_script, run_id=manual__2025-03-02T02:20:55+00:00, map_index=-1, run_start_date=2025-03-02 02:24:04.444124+00:00, run_end_date=2025-03-02 02:24:05.267080+00:00, run_duration=0.822956, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=33, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-03-02 02:24:00.119840+00:00, queued_by_job_id=21, pid=158561
+[2025-03-02T03:24:43.758+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=send_to_elastic, run_id=manual__2025-03-02T02:12:28.962725+00:00, map_index=-1, run_start_date=2025-03-02 02:24:26.461218+00:00, run_end_date=2025-03-02 02:24:42.481405+00:00, run_duration=16.020187, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=35, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 02:24:00.119840+00:00, queued_by_job_id=21, pid=158667
+[2025-03-02T03:24:43.831+0100] {job.py:229} INFO - Heartbeat recovered after 49.75 seconds
+[2025-03-02T03:24:45.458+0100] {dagrun.py:854} INFO - Marking run <DagRun simple_meteo_dag @ 2025-03-02 01:00:00+00:00: scheduled__2025-03-02T01:00:00+00:00, state:running, queued_at: 2025-03-02 02:20:19.512486+00:00. externally triggered: False> successful
+Dag run in success state
+Dag run start:2025-03-02 02:20:19.655175+00:00 end:2025-03-02 02:24:45.516489+00:00
+[2025-03-02T03:24:45.526+0100] {dagrun.py:905} INFO - DagRun Finished: dag_id=simple_meteo_dag, execution_date=2025-03-02 01:00:00+00:00, run_id=scheduled__2025-03-02T01:00:00+00:00, run_start_date=2025-03-02 02:20:19.655175+00:00, run_end_date=2025-03-02 02:24:45.516489+00:00, run_duration=265.861314, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2025-03-02 01:00:00+00:00, data_interval_end=2025-03-02 02:00:00+00:00, dag_hash=e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T03:24:45.561+0100] {dag.py:4180} INFO - Setting next_dagrun for simple_meteo_dag to 2025-03-02 02:00:00+00:00, run_after=2025-03-02 03:00:00+00:00
+[2025-03-02T03:24:45.566+0100] {dagrun.py:854} INFO - Marking run <DagRun simple_meteo_dag @ 2025-03-02 02:12:28.962725+00:00: manual__2025-03-02T02:12:28.962725+00:00, state:running, queued_at: 2025-03-02 02:12:29.127296+00:00. externally triggered: True> successful
+Dag run in success state
+Dag run start:2025-03-02 02:20:19.933190+00:00 end:2025-03-02 02:24:45.568386+00:00
+[2025-03-02T03:24:45.569+0100] {dagrun.py:905} INFO - DagRun Finished: dag_id=simple_meteo_dag, execution_date=2025-03-02 02:12:28.962725+00:00, run_id=manual__2025-03-02T02:12:28.962725+00:00, run_start_date=2025-03-02 02:20:19.933190+00:00, run_end_date=2025-03-02 02:24:45.568386+00:00, run_duration=265.635196, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-03-02 01:00:00+00:00, data_interval_end=2025-03-02 02:00:00+00:00, dag_hash=e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T03:24:45.636+0100] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [scheduled]>
+[2025-03-02T03:24:45.638+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T03:24:45.639+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [scheduled]>
+[2025-03-02T03:24:45.660+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T03:24:45.662+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T02:20:55+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T03:24:45.663+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:24:45.681+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:24:48.985+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:24:49.458+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:24:49.473+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:24:49.474+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:24:49.945+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:24:54.106+0100] {sequential_executor.py:91} ERROR - Failed to execute task Command '['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']' returned non-zero exit status 1..
+[2025-03-02T03:24:54.109+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state failed for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T02:20:55+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:24:54.143+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=send_to_elastic, run_id=manual__2025-03-02T02:20:55+00:00, map_index=-1, run_start_date=None, run_end_date=None, run_duration=None, state=queued, executor=SequentialExecutor(parallelism=32), executor_state=failed, try_number=1, max_tries=1, job_id=None, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 02:24:45.641442+00:00, queued_by_job_id=21, pid=None
+[2025-03-02T03:24:54.146+0100] {scheduler_job_runner.py:922} ERROR - Executor SequentialExecutor(parallelism=32) reported that the task instance <TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [queued]> finished with state failed, but the task instance's state attribute is queued. Learn more: https://airflow.apache.org/docs/apache-airflow/stable/troubleshooting.html#task-state-changed-externally
+[2025-03-02T03:24:55.656+0100] {taskinstance.py:3315} ERROR - Executor SequentialExecutor(parallelism=32) reported that the task instance <TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [queued]> finished with state failed, but the task instance's state attribute is queued. Learn more: https://airflow.apache.org/docs/apache-airflow/stable/troubleshooting.html#task-state-changed-externally
+Task instance in failure state
+Task start:None end:2025-03-02 02:24:55.683478+00:00 duration:None
+Task:<Task(BashOperator): send_to_elastic> dag:<DAG: simple_meteo_dag> dagrun:<DagRun simple_meteo_dag @ 2025-03-02 02:20:55+00:00: manual__2025-03-02T02:20:55+00:00, state:running, queued_at: 2025-03-02 02:20:55.624712+00:00. externally triggered: True>
+Failure caused by Executor SequentialExecutor(parallelism=32) reported that the task instance <TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [queued]> finished with state failed, but the task instance's state attribute is queued. Learn more: https://airflow.apache.org/docs/apache-airflow/stable/troubleshooting.html#task-state-changed-externally
+[2025-03-02T03:24:55.728+0100] {taskinstance.py:1226} INFO - Marking task as UP_FOR_RETRY. dag_id=simple_meteo_dag, task_id=send_to_elastic, run_id=manual__2025-03-02T02:20:55+00:00, execution_date=20250302T022055, start_date=, end_date=20250302T022455
+[2025-03-02T03:24:57.904+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T03:29:39.997+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T03:29:57.336+0100] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [scheduled]>
+[2025-03-02T03:29:57.338+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T03:29:57.339+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [scheduled]>
+[2025-03-02T03:29:57.358+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T03:29:57.363+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T02:20:55+00:00', try_number=2, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T03:29:57.365+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:29:57.385+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T02:20:55+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:30:05.957+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:30:06.606+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:30:06.624+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:30:06.625+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:30:07.240+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:20:55+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:30:23.266+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T02:20:55+00:00', try_number=2, map_index=-1)
+[2025-03-02T03:30:23.301+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=send_to_elastic, run_id=manual__2025-03-02T02:20:55+00:00, map_index=-1, run_start_date=2025-03-02 02:30:07.530351+00:00, run_end_date=2025-03-02 02:30:22.009055+00:00, run_duration=14.478704, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=2, max_tries=1, job_id=36, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 02:29:57.340878+00:00, queued_by_job_id=21, pid=159951
+[2025-03-02T03:30:24.056+0100] {dagrun.py:854} INFO - Marking run <DagRun simple_meteo_dag @ 2025-03-02 02:20:55+00:00: manual__2025-03-02T02:20:55+00:00, state:running, queued_at: 2025-03-02 02:20:55.624712+00:00. externally triggered: True> successful
+Dag run in success state
+Dag run start:2025-03-02 02:22:30.579548+00:00 end:2025-03-02 02:30:24.058212+00:00
+[2025-03-02T03:30:24.065+0100] {dagrun.py:905} INFO - DagRun Finished: dag_id=simple_meteo_dag, execution_date=2025-03-02 02:20:55+00:00, run_id=manual__2025-03-02T02:20:55+00:00, run_start_date=2025-03-02 02:22:30.579548+00:00, run_end_date=2025-03-02 02:30:24.058212+00:00, run_duration=473.478664, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-03-02 01:00:00+00:00, data_interval_end=2025-03-02 02:00:00+00:00, dag_hash=e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T03:34:22.212+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T03:39:02.437+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+Dag run  in running state
+Dag information Queued at: 2025-03-02 02:40:57.697458+00:00 hash info: e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T03:40:59.111+0100] {scheduler_job_runner.py:435} INFO - 2 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>
+[2025-03-02T03:40:59.113+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T03:40:59.115+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T03:40:59.116+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>
+[2025-03-02T03:40:59.137+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T03:40:59.150+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='manual__2025-03-02T02:40:57.104881+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 4 and queue default
+[2025-03-02T03:40:59.153+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'manual__2025-03-02T02:40:57.104881+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:40:59.155+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='manual__2025-03-02T02:40:57.104881+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T03:40:59.156+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'manual__2025-03-02T02:40:57.104881+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:40:59.178+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'manual__2025-03-02T02:40:57.104881+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:41:11.646+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:41:12.515+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:41:12.536+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:41:12.538+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:41:13.331+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T02:40:57.104881+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:42:08.313+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'manual__2025-03-02T02:40:57.104881+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:42:14.718+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:42:15.343+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:42:15.361+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:42:15.362+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:42:15.940+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T02:40:57.104881+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:42:20.695+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='manual__2025-03-02T02:40:57.104881+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:42:20.716+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='manual__2025-03-02T02:40:57.104881+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:42:21.712+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_etat_traffic_script, run_id=manual__2025-03-02T02:40:57.104881+00:00, map_index=-1, run_start_date=2025-03-02 02:42:16.157671+00:00, run_end_date=2025-03-02 02:42:19.408275+00:00, run_duration=3.250604, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=38, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 02:40:59.119161+00:00, queued_by_job_id=21, pid=161794
+[2025-03-02T03:42:21.765+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_meteo_script, run_id=manual__2025-03-02T02:40:57.104881+00:00, map_index=-1, run_start_date=2025-03-02 02:41:13.592743+00:00, run_end_date=2025-03-02 02:42:00.893216+00:00, run_duration=47.300473, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=37, pool=default_pool, queue=default, priority_weight=4, operator=BashOperator, queued_dttm=2025-03-02 02:40:59.119161+00:00, queued_by_job_id=21, pid=161310
+[2025-03-02T03:42:21.828+0100] {manager.py:293} ERROR - DagFileProcessorManager (PID=158472) last sent a heartbeat 89.27 seconds ago! Restarting it
+[2025-03-02T03:42:21.878+0100] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 158472. PIDs of all processes in the group: [158472]
+[2025-03-02T03:42:21.881+0100] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 158472
+[2025-03-02T03:42:25.150+0100] {process_utils.py:80} INFO - Process psutil.Process(pid=158472, status='terminated', exitcode=0, started='03:23:39') (158472) terminated with exit code 0
+[2025-03-02T03:42:25.226+0100] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 161798
+[2025-03-02T03:42:25.656+0100] {job.py:229} INFO - Heartbeat recovered after 90.99 seconds
+[2025-03-02T03:42:25.584+0100] {settings.py:63} INFO - Configured default timezone UTC
+[2025-03-02T03:42:26.765+0100] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[2025-03-02T03:42:29.022+0100] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>
+[2025-03-02T03:42:29.025+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T03:42:29.026+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>
+[2025-03-02T03:42:29.047+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T03:42:29.050+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='manual__2025-03-02T02:40:57.104881+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2025-03-02T03:42:29.052+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'manual__2025-03-02T02:40:57.104881+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:42:29.071+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'manual__2025-03-02T02:40:57.104881+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:42:31.229+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:42:31.798+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:42:31.816+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:42:31.819+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:42:32.333+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T02:40:57.104881+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:42:35.379+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='manual__2025-03-02T02:40:57.104881+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:42:35.399+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_script, run_id=manual__2025-03-02T02:40:57.104881+00:00, map_index=-1, run_start_date=2025-03-02 02:42:32.565332+00:00, run_end_date=2025-03-02 02:42:34.325460+00:00, run_duration=1.760128, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=39, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2025-03-02 02:42:29.029266+00:00, queued_by_job_id=21, pid=161818
+[2025-03-02T03:42:35.925+0100] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>
+[2025-03-02T03:42:35.926+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T03:42:35.927+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>
+[2025-03-02T03:42:35.936+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T03:42:35.937+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='manual__2025-03-02T02:40:57.104881+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2025-03-02T03:42:35.938+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'manual__2025-03-02T02:40:57.104881+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:42:35.949+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'manual__2025-03-02T02:40:57.104881+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:42:38.776+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:42:39.126+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:42:39.139+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:42:39.140+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:42:39.484+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T02:40:57.104881+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:42:41.316+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='manual__2025-03-02T02:40:57.104881+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:42:41.344+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_prioritaire_script, run_id=manual__2025-03-02T02:40:57.104881+00:00, map_index=-1, run_start_date=2025-03-02 02:42:39.648488+00:00, run_end_date=2025-03-02 02:42:40.326115+00:00, run_duration=0.677627, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=40, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-03-02 02:42:35.928076+00:00, queued_by_job_id=21, pid=161850
+[2025-03-02T03:42:42.012+0100] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>
+[2025-03-02T03:42:42.013+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T03:42:42.015+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>
+[2025-03-02T03:42:42.034+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:40:57.104881+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T03:42:42.036+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T02:40:57.104881+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T03:42:42.037+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T02:40:57.104881+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:42:42.060+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T02:40:57.104881+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T03:42:45.144+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T03:42:45.601+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:42:45.621+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T03:42:45.622+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T03:42:46.039+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T02:40:57.104881+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T03:42:58.763+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T02:40:57.104881+00:00', try_number=1, map_index=-1)
+[2025-03-02T03:42:58.791+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=send_to_elastic, run_id=manual__2025-03-02T02:40:57.104881+00:00, map_index=-1, run_start_date=2025-03-02 02:42:46.301287+00:00, run_end_date=2025-03-02 02:42:57.710645+00:00, run_duration=11.409358, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=41, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 02:42:42.017362+00:00, queued_by_job_id=21, pid=161871
+[2025-03-02T03:42:59.432+0100] {dagrun.py:854} INFO - Marking run <DagRun simple_meteo_dag @ 2025-03-02 02:40:57.104881+00:00: manual__2025-03-02T02:40:57.104881+00:00, state:running, queued_at: 2025-03-02 02:40:57.697458+00:00. externally triggered: True> successful
+Dag run in success state
+Dag run start:2025-03-02 02:40:58.774586+00:00 end:2025-03-02 02:42:59.433932+00:00
+[2025-03-02T03:42:59.438+0100] {dagrun.py:905} INFO - DagRun Finished: dag_id=simple_meteo_dag, execution_date=2025-03-02 02:40:57.104881+00:00, run_id=manual__2025-03-02T02:40:57.104881+00:00, run_start_date=2025-03-02 02:40:58.774586+00:00, run_end_date=2025-03-02 02:42:59.433932+00:00, run_duration=120.659346, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-03-02 01:00:00+00:00, data_interval_end=2025-03-02 02:00:00+00:00, dag_hash=e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T03:43:43.744+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T03:48:25.226+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T03:53:05.732+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T03:57:47.822+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T04:00:02.538+0100] {dag.py:4180} INFO - Setting next_dagrun for simple_meteo_dag to 2025-03-02 03:00:00+00:00, run_after=2025-03-02 04:00:00+00:00
+Dag run  in running state
+Dag information Queued at: 2025-03-02 03:00:02.357196+00:00 hash info: e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T04:00:02.846+0100] {scheduler_job_runner.py:435} INFO - 2 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>
+[2025-03-02T04:00:02.848+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T04:00:02.850+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T04:00:02.851+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>
+[2025-03-02T04:00:02.873+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T04:00:02.886+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='scheduled__2025-03-02T02:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 4 and queue default
+[2025-03-02T04:00:02.888+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'scheduled__2025-03-02T02:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:00:02.890+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='scheduled__2025-03-02T02:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T04:00:02.891+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'scheduled__2025-03-02T02:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:00:02.909+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'scheduled__2025-03-02T02:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:00:13.768+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:00:14.736+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:00:14.763+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:00:14.764+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:00:15.937+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T02:00:00+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:01:22.948+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'scheduled__2025-03-02T02:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:01:30.226+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:01:30.843+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:01:30.860+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:01:30.861+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:01:31.457+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T02:00:00+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:01:35.865+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='scheduled__2025-03-02T02:00:00+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:01:35.883+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='scheduled__2025-03-02T02:00:00+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:01:37.232+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_etat_traffic_script, run_id=scheduled__2025-03-02T02:00:00+00:00, map_index=-1, run_start_date=2025-03-02 03:01:31.691094+00:00, run_end_date=2025-03-02 03:01:34.731923+00:00, run_duration=3.040829, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=43, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 03:00:02.855130+00:00, queued_by_job_id=21, pid=165228
+[2025-03-02T04:01:37.302+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_meteo_script, run_id=scheduled__2025-03-02T02:00:00+00:00, map_index=-1, run_start_date=2025-03-02 03:00:16.228881+00:00, run_end_date=2025-03-02 03:01:11.888669+00:00, run_duration=55.659788, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=42, pool=default_pool, queue=default, priority_weight=4, operator=BashOperator, queued_dttm=2025-03-02 03:00:02.855130+00:00, queued_by_job_id=21, pid=164739
+[2025-03-02T04:01:37.390+0100] {manager.py:293} ERROR - DagFileProcessorManager (PID=161798) last sent a heartbeat 101.50 seconds ago! Restarting it
+[2025-03-02T04:01:37.457+0100] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 161798. PIDs of all processes in the group: [161798]
+[2025-03-02T04:01:37.461+0100] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 161798
+[2025-03-02T04:01:38.879+0100] {process_utils.py:80} INFO - Process psutil.Process(pid=161798, status='terminated', exitcode=0, started='03:43:44') (161798) terminated with exit code 0
+[2025-03-02T04:01:38.953+0100] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 165239
+[2025-03-02T04:01:39.309+0100] {job.py:229} INFO - Heartbeat recovered after 101.77 seconds
+[2025-03-02T04:01:39.305+0100] {settings.py:63} INFO - Configured default timezone UTC
+[2025-03-02T04:01:40.221+0100] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+Dag run  in running state
+Dag information Queued at: 2025-03-02 03:00:03.672545+00:00 hash info: e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T04:01:42.352+0100] {scheduler_job_runner.py:435} INFO - 3 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>
+[2025-03-02T04:01:42.355+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T04:01:42.357+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T04:01:42.358+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 2/16 running and queued tasks
+[2025-03-02T04:01:42.360+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>
+[2025-03-02T04:01:42.387+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_action_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T04:01:42.390+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='manual__2025-03-02T03:00:03.153874+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 4 and queue default
+[2025-03-02T04:01:42.392+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'manual__2025-03-02T03:00:03.153874+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:01:42.393+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='scheduled__2025-03-02T02:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2025-03-02T04:01:42.394+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'scheduled__2025-03-02T02:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:01:42.396+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='manual__2025-03-02T03:00:03.153874+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T04:01:42.397+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'manual__2025-03-02T03:00:03.153874+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:01:42.418+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'manual__2025-03-02T03:00:03.153874+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:01:45.599+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:01:46.103+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:01:46.124+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:01:46.126+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:01:46.606+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T03:00:03.153874+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:02:13.896+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'scheduled__2025-03-02T02:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:17.566+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:02:17.923+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:17.934+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:02:17.935+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:18.243+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_script scheduled__2025-03-02T02:00:00+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:02:20.048+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'manual__2025-03-02T03:00:03.153874+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:21.915+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:02:22.252+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:22.260+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:02:22.261+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:22.485+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T03:00:03.153874+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:02:25.788+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='manual__2025-03-02T03:00:03.153874+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:02:25.790+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='scheduled__2025-03-02T02:00:00+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:02:25.791+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='manual__2025-03-02T03:00:03.153874+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:02:26.000+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_script, run_id=scheduled__2025-03-02T02:00:00+00:00, map_index=-1, run_start_date=2025-03-02 03:02:18.342678+00:00, run_end_date=2025-03-02 03:02:19.302858+00:00, run_duration=0.96018, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=45, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2025-03-02 03:01:42.362682+00:00, queued_by_job_id=21, pid=165720
+[2025-03-02T04:02:26.023+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_etat_traffic_script, run_id=manual__2025-03-02T03:00:03.153874+00:00, map_index=-1, run_start_date=2025-03-02 03:02:22.598806+00:00, run_end_date=2025-03-02 03:02:24.934167+00:00, run_duration=2.335361, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=46, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 03:01:42.362682+00:00, queued_by_job_id=21, pid=165749
+[2025-03-02T04:02:26.024+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_meteo_script, run_id=manual__2025-03-02T03:00:03.153874+00:00, map_index=-1, run_start_date=2025-03-02 03:01:46.830121+00:00, run_end_date=2025-03-02 03:02:11.497549+00:00, run_duration=24.667428, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=44, pool=default_pool, queue=default, priority_weight=4, operator=BashOperator, queued_dttm=2025-03-02 03:01:42.362682+00:00, queued_by_job_id=21, pid=165309
+[2025-03-02T04:02:26.093+0100] {job.py:229} INFO - Heartbeat recovered after 46.90 seconds
+[2025-03-02T04:02:27.606+0100] {scheduler_job_runner.py:435} INFO - 2 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>
+[2025-03-02T04:02:27.608+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T04:02:27.610+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T04:02:27.610+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>
+[2025-03-02T04:02:27.622+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_action_prioritaire_script scheduled__2025-03-02T02:00:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T04:02:27.624+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='manual__2025-03-02T03:00:03.153874+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2025-03-02T04:02:27.625+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'manual__2025-03-02T03:00:03.153874+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:27.626+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='scheduled__2025-03-02T02:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2025-03-02T04:02:27.627+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'scheduled__2025-03-02T02:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:27.639+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'manual__2025-03-02T03:00:03.153874+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:29.658+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:02:29.966+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:29.977+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:02:29.977+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:30.200+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T03:00:03.153874+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:02:31.955+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'scheduled__2025-03-02T02:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:33.650+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:02:33.926+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:33.936+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:02:33.937+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:34.161+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_prioritaire_script scheduled__2025-03-02T02:00:00+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:02:35.662+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='manual__2025-03-02T03:00:03.153874+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:02:35.663+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='scheduled__2025-03-02T02:00:00+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:02:35.679+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_prioritaire_script, run_id=scheduled__2025-03-02T02:00:00+00:00, map_index=-1, run_start_date=2025-03-02 03:02:34.419823+00:00, run_end_date=2025-03-02 03:02:34.896086+00:00, run_duration=0.476263, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=48, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-03-02 03:02:27.612104+00:00, queued_by_job_id=21, pid=165804
+[2025-03-02T04:02:35.680+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_script, run_id=manual__2025-03-02T03:00:03.153874+00:00, map_index=-1, run_start_date=2025-03-02 03:02:30.288876+00:00, run_end_date=2025-03-02 03:02:31.102894+00:00, run_duration=0.814018, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=47, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2025-03-02 03:02:27.612104+00:00, queued_by_job_id=21, pid=165769
+[2025-03-02T04:02:35.718+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T04:02:36.071+0100] {scheduler_job_runner.py:435} INFO - 2 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.send_to_elastic scheduled__2025-03-02T02:00:00+00:00 [scheduled]>
+[2025-03-02T04:02:36.072+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T04:02:36.073+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T04:02:36.073+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.send_to_elastic scheduled__2025-03-02T02:00:00+00:00 [scheduled]>
+[2025-03-02T04:02:36.081+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.send_to_elastic scheduled__2025-03-02T02:00:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T04:02:36.082+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='manual__2025-03-02T03:00:03.153874+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2025-03-02T04:02:36.083+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'manual__2025-03-02T03:00:03.153874+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:36.083+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='scheduled__2025-03-02T02:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T04:02:36.084+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'scheduled__2025-03-02T02:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:36.092+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'manual__2025-03-02T03:00:03.153874+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:37.807+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:02:38.092+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:38.099+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:02:38.100+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:38.317+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T03:00:03.153874+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:02:39.468+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'scheduled__2025-03-02T02:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:39.002+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:02:39.253+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:39.260+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:02:39.261+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:39.464+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.send_to_elastic scheduled__2025-03-02T02:00:00+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:02:49.927+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='manual__2025-03-02T03:00:03.153874+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:02:49.928+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='scheduled__2025-03-02T02:00:00+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:02:49.942+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=send_to_elastic, run_id=scheduled__2025-03-02T02:00:00+00:00, map_index=-1, run_start_date=2025-03-02 03:02:39.551343+00:00, run_end_date=2025-03-02 03:02:49.162543+00:00, run_duration=9.6112, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=50, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 03:02:36.074726+00:00, queued_by_job_id=21, pid=165892
+[2025-03-02T04:02:49.944+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_prioritaire_script, run_id=manual__2025-03-02T03:00:03.153874+00:00, map_index=-1, run_start_date=2025-03-02 03:02:38.404348+00:00, run_end_date=2025-03-02 03:02:38.746570+00:00, run_duration=0.342222, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=49, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-03-02 03:02:36.074726+00:00, queued_by_job_id=21, pid=165825
+[2025-03-02T04:02:50.348+0100] {dagrun.py:854} INFO - Marking run <DagRun simple_meteo_dag @ 2025-03-02 02:00:00+00:00: scheduled__2025-03-02T02:00:00+00:00, state:running, queued_at: 2025-03-02 03:00:02.357196+00:00. externally triggered: False> successful
+Dag run in success state
+Dag run start:2025-03-02 03:00:02.605485+00:00 end:2025-03-02 03:02:50.349796+00:00
+[2025-03-02T04:02:50.355+0100] {dagrun.py:905} INFO - DagRun Finished: dag_id=simple_meteo_dag, execution_date=2025-03-02 02:00:00+00:00, run_id=scheduled__2025-03-02T02:00:00+00:00, run_start_date=2025-03-02 03:00:02.605485+00:00, run_end_date=2025-03-02 03:02:50.349796+00:00, run_duration=167.744311, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2025-03-02 02:00:00+00:00, data_interval_end=2025-03-02 03:00:00+00:00, dag_hash=e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T04:02:50.391+0100] {dag.py:4180} INFO - Setting next_dagrun for simple_meteo_dag to 2025-03-02 03:00:00+00:00, run_after=2025-03-02 04:00:00+00:00
+[2025-03-02T04:02:50.425+0100] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>
+[2025-03-02T04:02:50.425+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T04:02:50.426+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>
+[2025-03-02T04:02:50.435+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T03:00:03.153874+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T04:02:50.436+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T03:00:03.153874+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T04:02:50.437+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T03:00:03.153874+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:50.446+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T03:00:03.153874+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:02:52.378+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:02:52.650+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:52.657+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:02:52.658+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:02:52.881+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T03:00:03.153874+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:03:02.401+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T03:00:03.153874+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:03:02.417+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=send_to_elastic, run_id=manual__2025-03-02T03:00:03.153874+00:00, map_index=-1, run_start_date=2025-03-02 03:02:52.973330+00:00, run_end_date=2025-03-02 03:03:01.591390+00:00, run_duration=8.61806, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=51, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 03:02:50.427071+00:00, queued_by_job_id=21, pid=165924
+[2025-03-02T04:03:02.810+0100] {dagrun.py:854} INFO - Marking run <DagRun simple_meteo_dag @ 2025-03-02 03:00:03.153874+00:00: manual__2025-03-02T03:00:03.153874+00:00, state:running, queued_at: 2025-03-02 03:00:03.672545+00:00. externally triggered: True> successful
+Dag run in success state
+Dag run start:2025-03-02 03:01:42.099229+00:00 end:2025-03-02 03:03:02.811348+00:00
+[2025-03-02T04:03:02.811+0100] {dagrun.py:905} INFO - DagRun Finished: dag_id=simple_meteo_dag, execution_date=2025-03-02 03:00:03.153874+00:00, run_id=manual__2025-03-02T03:00:03.153874+00:00, run_start_date=2025-03-02 03:01:42.099229+00:00, run_end_date=2025-03-02 03:03:02.811348+00:00, run_duration=80.712119, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-03-02 02:00:00+00:00, data_interval_end=2025-03-02 03:00:00+00:00, dag_hash=e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T04:07:14.750+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T04:11:55.746+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T04:16:35.408+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T04:21:22.637+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T04:26:06.953+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T04:30:49.253+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T04:35:31.711+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+Dag run  in running state
+Dag information Queued at: 2025-03-02 03:35:57.841507+00:00 hash info: e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T04:35:58.322+0100] {scheduler_job_runner.py:435} INFO - 2 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>
+[2025-03-02T04:35:58.324+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T04:35:58.326+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T04:35:58.326+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>
+[2025-03-02T04:35:58.339+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T04:35:58.357+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='manual__2025-03-02T03:35:57.578448+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 4 and queue default
+[2025-03-02T04:35:58.359+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'manual__2025-03-02T03:35:57.578448+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:35:58.360+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='manual__2025-03-02T03:35:57.578448+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T04:35:58.361+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'manual__2025-03-02T03:35:57.578448+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:35:58.373+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'manual__2025-03-02T03:35:57.578448+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:36:08.811+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:36:09.376+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:36:09.390+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:36:09.391+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:36:09.918+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_meteo_script manual__2025-03-02T03:35:57.578448+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:36:43.588+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'manual__2025-03-02T03:35:57.578448+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:36:47.619+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:36:48.053+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:36:48.063+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:36:48.064+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:36:48.423+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_etat_traffic_script manual__2025-03-02T03:35:57.578448+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:36:51.858+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='manual__2025-03-02T03:35:57.578448+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:36:51.866+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='manual__2025-03-02T03:35:57.578448+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:36:52.119+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_etat_traffic_script, run_id=manual__2025-03-02T03:35:57.578448+00:00, map_index=-1, run_start_date=2025-03-02 03:36:48.611506+00:00, run_end_date=2025-03-02 03:36:51.061763+00:00, run_duration=2.450257, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=53, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 03:35:58.328316+00:00, queued_by_job_id=21, pid=171681
+[2025-03-02T04:36:52.134+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_meteo_script, run_id=manual__2025-03-02T03:35:57.578448+00:00, map_index=-1, run_start_date=2025-03-02 03:36:10.036658+00:00, run_end_date=2025-03-02 03:36:39.698689+00:00, run_duration=29.662031, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=52, pool=default_pool, queue=default, priority_weight=4, operator=BashOperator, queued_dttm=2025-03-02 03:35:58.328316+00:00, queued_by_job_id=21, pid=171198
+[2025-03-02T04:36:52.158+0100] {manager.py:293} ERROR - DagFileProcessorManager (PID=165239) last sent a heartbeat 58.35 seconds ago! Restarting it
+[2025-03-02T04:36:52.182+0100] {process_utils.py:132} INFO - Sending Signals.SIGTERM to group 165239. PIDs of all processes in the group: [165239]
+[2025-03-02T04:36:52.183+0100] {process_utils.py:87} INFO - Sending the signal Signals.SIGTERM to group 165239
+[2025-03-02T04:36:53.739+0100] {process_utils.py:80} INFO - Process psutil.Process(pid=165239, status='terminated', exitcode=0, started='04:04:18') (165239) terminated with exit code 0
+[2025-03-02T04:36:53.769+0100] {manager.py:174} INFO - Launched DagFileProcessorManager with pid: 171684
+[2025-03-02T04:36:53.869+0100] {job.py:229} INFO - Heartbeat recovered after 59.35 seconds
+[2025-03-02T04:36:53.920+0100] {settings.py:63} INFO - Configured default timezone UTC
+[2025-03-02T04:36:54.424+0100] {manager.py:406} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[2025-03-02T04:36:55.501+0100] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>
+[2025-03-02T04:36:55.502+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T04:36:55.502+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>
+[2025-03-02T04:36:55.513+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T04:36:55.515+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='manual__2025-03-02T03:35:57.578448+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 3 and queue default
+[2025-03-02T04:36:55.517+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'manual__2025-03-02T03:35:57.578448+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:36:55.526+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_script', 'manual__2025-03-02T03:35:57.578448+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:36:57.351+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:36:57.661+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:36:57.672+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:36:57.672+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:36:57.940+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_script manual__2025-03-02T03:35:57.578448+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:37:00.405+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_script', run_id='manual__2025-03-02T03:35:57.578448+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:37:00.420+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_script, run_id=manual__2025-03-02T03:35:57.578448+00:00, map_index=-1, run_start_date=2025-03-02 03:36:58.066659+00:00, run_end_date=2025-03-02 03:36:59.294600+00:00, run_duration=1.227941, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=54, pool=default_pool, queue=default, priority_weight=3, operator=BashOperator, queued_dttm=2025-03-02 03:36:55.503521+00:00, queued_by_job_id=21, pid=171701
+[2025-03-02T04:37:00.952+0100] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>
+[2025-03-02T04:37:00.953+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T04:37:00.954+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>
+[2025-03-02T04:37:00.963+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T04:37:00.964+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='manual__2025-03-02T03:35:57.578448+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 2 and queue default
+[2025-03-02T04:37:00.965+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'manual__2025-03-02T03:35:57.578448+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:37:00.975+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_action_prioritaire_script', 'manual__2025-03-02T03:35:57.578448+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:37:02.880+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:37:03.143+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:37:03.150+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:37:03.151+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:37:03.379+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.run_action_prioritaire_script manual__2025-03-02T03:35:57.578448+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:37:04.699+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_action_prioritaire_script', run_id='manual__2025-03-02T03:35:57.578448+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:37:04.711+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=run_action_prioritaire_script, run_id=manual__2025-03-02T03:35:57.578448+00:00, map_index=-1, run_start_date=2025-03-02 03:37:03.480272+00:00, run_end_date=2025-03-02 03:37:03.874592+00:00, run_duration=0.39432, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=55, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-03-02 03:37:00.955873+00:00, queued_by_job_id=21, pid=171733
+[2025-03-02T04:37:05.052+0100] {scheduler_job_runner.py:435} INFO - 1 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>
+[2025-03-02T04:37:05.052+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T04:37:05.053+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>
+[2025-03-02T04:37:05.061+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T03:35:57.578448+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T04:37:05.061+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T03:35:57.578448+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T04:37:05.062+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T03:35:57.578448+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:37:05.071+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'send_to_elastic', 'manual__2025-03-02T03:35:57.578448+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T04:37:06.834+0100] {dagbag.py:588} INFO - Filling up the DagBag from /mnt/c/Users/33618/OneDrive/Documents/Cours Telecom/Datalake/project_datalake3/airflow/dags/Dag2.py
+[2025-03-02T04:37:07.102+0100] {example_kubernetes_executor.py:39} WARNING - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:37:07.110+0100] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2025-03-02T04:37:07.111+0100] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2025-03-02T04:37:07.326+0100] {task_command.py:467} INFO - Running <TaskInstance: simple_meteo_dag.send_to_elastic manual__2025-03-02T03:35:57.578448+00:00 [queued]> on host LAPTOP-G2B5HK76.
+[2025-03-02T04:37:16.145+0100] {scheduler_job_runner.py:776} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='simple_meteo_dag', task_id='send_to_elastic', run_id='manual__2025-03-02T03:35:57.578448+00:00', try_number=1, map_index=-1)
+[2025-03-02T04:37:16.158+0100] {scheduler_job_runner.py:813} INFO - TaskInstance Finished: dag_id=simple_meteo_dag, task_id=send_to_elastic, run_id=manual__2025-03-02T03:35:57.578448+00:00, map_index=-1, run_start_date=2025-03-02 03:37:07.415729+00:00, run_end_date=2025-03-02 03:37:15.278650+00:00, run_duration=7.862921, state=success, executor=SequentialExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=1, job_id=56, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-03-02 03:37:05.054210+00:00, queued_by_job_id=21, pid=171752
+[2025-03-02T04:37:16.504+0100] {dagrun.py:854} INFO - Marking run <DagRun simple_meteo_dag @ 2025-03-02 03:35:57.578448+00:00: manual__2025-03-02T03:35:57.578448+00:00, state:running, queued_at: 2025-03-02 03:35:57.841507+00:00. externally triggered: True> successful
+Dag run in success state
+Dag run start:2025-03-02 03:35:58.091665+00:00 end:2025-03-02 03:37:16.505665+00:00
+[2025-03-02T04:37:16.507+0100] {dagrun.py:905} INFO - DagRun Finished: dag_id=simple_meteo_dag, execution_date=2025-03-02 03:35:57.578448+00:00, run_id=manual__2025-03-02T03:35:57.578448+00:00, run_start_date=2025-03-02 03:35:58.091665+00:00, run_end_date=2025-03-02 03:37:16.505665+00:00, run_duration=78.414, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-03-02 02:00:00+00:00, data_interval_end=2025-03-02 03:00:00+00:00, dag_hash=e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T04:40:13.367+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T04:44:52.755+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T04:49:33.216+0100] {scheduler_job_runner.py:1949} INFO - Adopting or resetting orphaned tasks for active dag runs
+[2025-03-02T05:08:35.722+0100] {dag.py:4180} INFO - Setting next_dagrun for simple_meteo_dag to 2025-03-02 04:00:00+00:00, run_after=2025-03-02 05:00:00+00:00
+Dag run  in running state
+Dag information Queued at: 2025-03-02 04:08:35.536546+00:00 hash info: e8cb26f5d3e309137b7fde1aa759e081
+[2025-03-02T05:08:36.630+0100] {scheduler_job_runner.py:435} INFO - 2 tasks up for execution:
+	<TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T03:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T03:00:00+00:00 [scheduled]>
+[2025-03-02T05:08:36.635+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 0/16 running and queued tasks
+[2025-03-02T05:08:36.637+0100] {scheduler_job_runner.py:507} INFO - DAG simple_meteo_dag has 1/16 running and queued tasks
+[2025-03-02T05:08:36.638+0100] {scheduler_job_runner.py:646} INFO - Setting the following tasks to queued state:
+	<TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T03:00:00+00:00 [scheduled]>
+	<TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T03:00:00+00:00 [scheduled]>
+[2025-03-02T05:08:36.654+0100] {scheduler_job_runner.py:748} INFO - Trying to enqueue tasks: [<TaskInstance: simple_meteo_dag.run_meteo_script scheduled__2025-03-02T03:00:00+00:00 [scheduled]>, <TaskInstance: simple_meteo_dag.run_etat_traffic_script scheduled__2025-03-02T03:00:00+00:00 [scheduled]>] for executor: SequentialExecutor(parallelism=32)
+[2025-03-02T05:08:36.662+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_meteo_script', run_id='scheduled__2025-03-02T03:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 4 and queue default
+[2025-03-02T05:08:36.663+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'scheduled__2025-03-02T03:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T05:08:36.664+0100] {scheduler_job_runner.py:692} INFO - Sending TaskInstanceKey(dag_id='simple_meteo_dag', task_id='run_etat_traffic_script', run_id='scheduled__2025-03-02T03:00:00+00:00', try_number=1, map_index=-1) to SequentialExecutor with priority 1 and queue default
+[2025-03-02T05:08:36.665+0100] {base_executor.py:169} INFO - Adding to queue: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_etat_traffic_script', 'scheduled__2025-03-02T03:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']
+[2025-03-02T05:08:36.684+0100] {sequential_executor.py:84} INFO - Executing command: ['airflow', 'tasks', 'run', 'simple_meteo_dag', 'run_meteo_script', 'scheduled__2025-03-02T03:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/Dag2.py']

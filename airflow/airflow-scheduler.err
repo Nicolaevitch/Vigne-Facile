@@ -1,0 +1,72 @@
+[2025-03-02 03:20:17 +0100] [156791] [INFO] Starting gunicorn 23.0.0
+[2025-03-02 03:20:17 +0100] [156791] [ERROR] Connection in use: ('::', 8793)
+[2025-03-02 03:20:17 +0100] [156791] [ERROR] connection to ('::', 8793) failed: [Errno 98] Address already in use
+[2025-03-02 03:20:18 +0100] [156791] [ERROR] Connection in use: ('::', 8793)
+[2025-03-02 03:20:18 +0100] [156791] [ERROR] connection to ('::', 8793) failed: [Errno 98] Address already in use
+[2025-03-02 03:20:19 +0100] [156791] [ERROR] Connection in use: ('::', 8793)
+[2025-03-02 03:20:19 +0100] [156791] [ERROR] connection to ('::', 8793) failed: [Errno 98] Address already in use
+[2025-03-02 03:20:20 +0100] [156791] [ERROR] Connection in use: ('::', 8793)
+[2025-03-02 03:20:20 +0100] [156791] [ERROR] connection to ('::', 8793) failed: [Errno 98] Address already in use
+[2025-03-02 03:20:19 +0100] [156791] [ERROR] Connection in use: ('::', 8793)
+[2025-03-02 03:20:19 +0100] [156791] [ERROR] connection to ('::', 8793) failed: [Errno 98] Address already in use
+[2025-03-02 03:20:20 +0100] [156791] [ERROR] Can't connect to ('::', 8793)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/engine/base.py", line 1094, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/engine/default.py", line 686, in do_commit
+    dbapi_connection.commit()
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/airflow", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.10/dist-packages/airflow/__main__.py", line 62, in main
+    args.func(args)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/cli/commands/task_command.py", line 254, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/cli/commands/task_command.py", line 322, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/jobs/job.py", line 419, in run_job
+    job.prepare_for_execution(session=session)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/jobs/job.py", line 266, in prepare_for_execution
+    self._merge_from(Job._add_to_db(job=self, session=session))
+  File "/usr/local/lib/python3.10/dist-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/airflow/jobs/job.py", line 350, in _add_to_db
+    session.commit()
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/orm/session.py", line 1454, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/orm/session.py", line 839, in commit
+    trans.commit()
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/engine/base.py", line 2469, in commit
+    self._do_commit()
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/engine/base.py", line 2659, in _do_commit
+    self._connection_commit_impl()
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/engine/base.py", line 2630, in _connection_commit_impl
+    self.connection._commit_impl()
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/engine/base.py", line 1096, in _commit_impl
+    self._handle_dbapi_exception(e, None, None, None, None)
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/engine/base.py", line 1094, in _commit_impl
+    self.engine.dialect.do_commit(self.connection)
+  File "/usr/local/lib/python3.10/dist-packages/sqlalchemy/engine/default.py", line 686, in do_commit
+    dbapi_connection.commit()
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) database is locked
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
